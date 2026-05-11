@@ -41,6 +41,62 @@
   new google.maps.places.Autocomplete(pickupInput);
   new google.maps.places.Autocomplete(destinationInput);
 </script>
+  <script>
+
+const form = document.querySelector('[data-booking-form]');
+const vehicleSelect = document.querySelector('select[name="vehicle"]');
+const pickupInput = document.querySelector('input[name="pickup"]');
+const destinationInput = document.querySelector('input[name="destination"]');
+
+const priceBox = document.createElement('div');
+
+priceBox.className = 'price-box';
+priceBox.innerHTML = 'Estimated price: <strong>€0</strong>';
+
+form.insertBefore(priceBox, form.querySelector('button'));
+
+function calculatePrice() {
+
+  const pickup = pickupInput.value.toLowerCase();
+  const destination = destinationInput.value.toLowerCase();
+  const vehicle = vehicleSelect.value;
+
+  let price = 0;
+
+  const bratislavaVienna =
+    (pickup.includes('bratislava') && destination.includes('vienna')) ||
+    (pickup.includes('vienna') && destination.includes('bratislava'));
+
+  if (bratislavaVienna) {
+
+    if (vehicle.includes('Sedan')) {
+      price = 120;
+    }
+
+    if (vehicle.includes('Van')) {
+      price = 139;
+    }
+  }
+
+  if (pickup.includes('bratislava') && destination.includes('bratislava')) {
+
+    if (vehicle.includes('Sedan')) {
+      price = 45;
+    }
+
+    if (vehicle.includes('Van')) {
+      price = 59;
+    }
+  }
+
+  priceBox.innerHTML = `Estimated price: <strong>€${price}</strong>`;
+}
+
+pickupInput.addEventListener('change', calculatePrice);
+destinationInput.addEventListener('change', calculatePrice);
+vehicleSelect.addEventListener('change', calculatePrice);
+
+</script>
   <body>
 
     <header class="site-header" data-header>
