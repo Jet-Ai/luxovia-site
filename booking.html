@@ -34,13 +34,65 @@
   </head>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFAtJJVm3nsjF3JyfsaMPeA3-MWtl9EpA&libraries=places"></script>
 
-<script>
-  const pickupInput = document.querySelector('input[name="pickup"]');
-  const destinationInput = document.querySelector('input[name="destination"]');
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFAtJJVm3nsjF3JyfsaMPeA3-MWtl9EpA&libraries=places"></script>
 
+<script>
+
+const pickupInput =
+  document.querySelector('input[name="pickup"]');
+
+const destinationInput =
+  document.querySelector('input[name="destination"]');
+
+const pickupAutocomplete =
   new google.maps.places.Autocomplete(pickupInput);
+
+const destinationAutocomplete =
   new google.maps.places.Autocomplete(destinationInput);
-  <div id="map"></div>
+
+const map = new google.maps.Map(
+  document.getElementById('map'),
+  {
+    center: {
+      lat: 48.1486,
+      lng: 17.1077
+    },
+    zoom: 8
+  }
+);
+
+const marker = new google.maps.Marker({
+  map: map
+});
+
+pickupAutocomplete.addListener('place_changed', () => {
+
+  const place =
+    pickupAutocomplete.getPlace();
+
+  if (!place.geometry) return;
+
+  map.setCenter(place.geometry.location);
+
+  marker.setPosition(
+    place.geometry.location
+  );
+});
+
+destinationAutocomplete.addListener('place_changed', () => {
+
+  const place =
+    destinationAutocomplete.getPlace();
+
+  if (!place.geometry) return;
+
+  map.setCenter(place.geometry.location);
+
+  marker.setPosition(
+    place.geometry.location
+  );
+});
+
 </script>
   <script>
 
