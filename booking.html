@@ -32,7 +32,15 @@
 
     <link rel="stylesheet" href="./styles.css" />
   </head>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFAtJJVm3nsjF3JyfsaMPeA3-MWtl9EpA&libraries=places"></script>
 
+<script>
+  const pickupInput = document.querySelector('input[name="pickup"]');
+  const destinationInput = document.querySelector('input[name="destination"]');
+
+  new google.maps.places.Autocomplete(pickupInput);
+  new google.maps.places.Autocomplete(destinationInput);
+</script>
   <body>
 
     <header class="site-header" data-header>
