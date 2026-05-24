@@ -11,9 +11,7 @@
     <title>
       Book Luxovia | Chauffeur & Airport Transfer Quote
     </title>
-<iframe src="https://autolekarsro.trial.easytaxioffice.com/booking?site_key=7e3f3d3085b900d598bc40543d611575" id="eto-iframe-booking" allow="geolocation" width="100%" height="250" scrolling="no" frameborder="0" style="width:1px; min-width:100%; border:0;"></iframe>
-<script src="https://autolekarsro.trial.easytaxioffice.com/assets/plugins/iframe-resizer/iframeResizer.min.js"></script>
-<script>iFrameResize({log:false, targetOrigin:'*', checkOrigin:false}, "iframe#eto-iframe-booking");</script>
+
     <meta
       name="description"
       content="Request a quote for Luxovia luxury sedan and luxury van chauffeur service, airport transfers and long-distance EU travel."
@@ -34,128 +32,9 @@
 
     <link rel="stylesheet" href="./styles.css" />
   </head>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFAtJJVm3nsjF3JyfsaMPeA3-MWtl9EpA&libraries=places"></script>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFAtJJVm3nsjF3JyfsaMPeA3-MWtl9EpA&libraries=places"></script>
-
-<script>
-
-const pickupInput =
-  document.querySelector('input[name="pickup"]');
-
-const destinationInput =
-  document.querySelector('input[name="destination"]');
-
-const pickupAutocomplete =
-  new google.maps.places.Autocomplete(pickupInput);
-
-const destinationAutocomplete =
-  new google.maps.places.Autocomplete(destinationInput);
-
-const map = new google.maps.Map(
-  document.getElementById('map'),
-  {
-    center: {
-      lat: 48.1486,
-      lng: 17.1077
-    },
-    zoom: 8
-  }
-);
-
-const marker = new google.maps.Marker({
-  map: map
-});
-
-pickupAutocomplete.addListener('place_changed', () => {
-
-  const place =
-    pickupAutocomplete.getPlace();
-
-  if (!place.geometry) return;
-
-  map.setCenter(place.geometry.location);
-
-  marker.setPosition(
-    place.geometry.location
-  );
-});
-
-destinationAutocomplete.addListener('place_changed', () => {
-
-  const place =
-    destinationAutocomplete.getPlace();
-
-  if (!place.geometry) return;
-
-  map.setCenter(place.geometry.location);
-
-  marker.setPosition(
-    place.geometry.location
-  );
-});
-
-</script>
-  <script>
-
-const form = document.querySelector('[data-booking-form]');
-const vehicleSelect = document.querySelector('select[name="vehicle"]');
-const pickupInput = document.querySelector('input[name="pickup"]');
-const destinationInput = document.querySelector('input[name="destination"]');
-
-const priceBox = document.createElement('div');
-
-priceBox.className = 'price-box';
-priceBox.innerHTML = 'Estimated price: <strong>€0</strong>';
-
-form.insertBefore(priceBox, form.querySelector('button'));
-
-function calculatePrice() {
-
-  const pickup = pickupInput.value.toLowerCase();
-  const destination = destinationInput.value.toLowerCase();
-  const vehicle = vehicleSelect.value;
-
-  let price = 0;
-
-  const bratislavaVienna =
-    (pickup.includes('bratislava') && destination.includes('vienna')) ||
-    (pickup.includes('vienna') && destination.includes('bratislava'));
-
-  if (bratislavaVienna) {
-
-    if (vehicle.includes('Sedan')) {
-      price = 120;
-    }
-
-    if (vehicle.includes('Van')) {
-      price = 139;
-    }
-  }
-
-  if (pickup.includes('bratislava') && destination.includes('bratislava')) {
-
-    if (vehicle.includes('Sedan')) {
-      price = 45;
-    }
-
-    if (vehicle.includes('Van')) {
-      price = 59;
-    }
-  }
-
-  priceBox.innerHTML = `Estimated price: <strong>€${price}</strong>`;
-}
-
-pickupInput.addEventListener('change', calculatePrice);
-destinationInput.addEventListener('change', calculatePrice);
-vehicleSelect.addEventListener('change', calculatePrice);
-
-</script>
   <body>
-
     <header class="site-header" data-header>
-
       <a class="brand" href="./index.html">
         LUXOVIA
       </a>
@@ -183,13 +62,10 @@ vehicleSelect.addEventListener('change', calculatePrice);
         <span></span>
         <span></span>
       </button>
-
     </header>
 
     <main>
-
       <section class="page-hero booking-page">
-
         <div class="page-hero-overlay"></div>
 
         <div>
@@ -200,132 +76,23 @@ vehicleSelect.addEventListener('change', calculatePrice);
             a quote or confirm via WhatsApp.
           </p>
         </div>
-
       </section>
 
       <section class="section booking-layout">
-
-        <form class="booking-panel wide light" data-booking-form>
-
-          <div class="panel-title">
-            <strong>Transfer details</strong>
-            <span>Estimate first, confirm after</span>
-          </div>
-
-          <label>
-            Pickup location
-
-            <input
-              name="pickup"
-              placeholder="Hotel, airport, FBO or address"
-              required
-            />
-          </label>
-
-          <label>
-            Destination
-
-            <input
-              name="destination"
-              placeholder="Destination address or city"
-              required
-            />
-          </label>
-
-          <div class="form-row">
-
-            <label>
-              Date & time
-
-              <input
-                type="datetime-local"
-                name="datetime"
-                required
-              />
-            </label>
-
-            <label>
-              Passengers
-
-              <select name="passengers">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>6</option>
-                <option>7</option>
-              </select>
-            </label>
-
-          </div>
-
-          <div class="form-row">
-
-            <label>
-              Luggage
-
-              <select name="luggage">
-                <option>0</option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5+</option>
-              </select>
-            </label>
-
-            <label>
-              Vehicle type
-
-              <select name="vehicle">
-                <option>Luxury Sedan (1-3 passengers)</option>
-                <option>Luxury Van (1-7 passengers)</option>
-              </select>
-            </label>
-
-          </div>
-
-          <label>
-            Special notes
-
-            <input
-              name="notes"
-              placeholder="Flight number, child seat, extra stop, company billing"
-            />
-          </label>
-
-          <button
-            class="button primary full"
-            type="submit"
-          >
-            Get estimated quote
-          </button>
-
-          <a
-            class="button ghost full payment-link"
-            href="https://checkout.revolut.com/pay/4ac6b9e8-836e-464c-9d63-3ee742e89c52"
-            target="_blank"
-            rel="noopener"
-          >
-            Pay confirmed quote by card
-          </a>
-
-          <a
-            class="quote-link"
-            href="mailto:booking@luxovia.eu"
-          >
-            Prefer email? Request a quote
-          </a>
-
-        </form>
-
+        <iframe
+          src="https://autolekarsro.trial.easytaxioffice.com/booking?site_key=7e3f3d3085b900d598bc40543d611575"
+          id="eto-iframe-booking"
+          allow="geolocation"
+          width="100%"
+          height="250"
+          scrolling="no"
+          frameborder="0"
+          style="width:1px; min-width:100%; border:0;"
+        ></iframe>
       </section>
-
     </main>
 
     <footer class="site-footer compact">
-
       <a class="brand" href="./index.html">
         LUXOVIA
       </a>
@@ -337,10 +104,21 @@ vehicleSelect.addEventListener('change', calculatePrice);
       <a href="tel:+421908375787">
         +421 908 37 57 87
       </a>
-
     </footer>
 
-    <script src="./script.js"></script>
+    <script src="https://autolekarsro.trial.easytaxioffice.com/assets/plugins/iframe-resizer/iframeResizer.min.js"></script>
 
+    <script>
+      iFrameResize(
+        {
+          log: false,
+          targetOrigin: "*",
+          checkOrigin: false
+        },
+        "#eto-iframe-booking"
+      );
+    </script>
+
+    <script src="./script.js"></script>
   </body>
 </html>
