@@ -1,3 +1,6 @@
+Here’s the full cleaned page with only the EasyTaxiOffice iframe booking system, centered in the page:
+
+```html
 <!doctype html>
 <html lang="en">
   <head>
@@ -79,16 +82,24 @@
       </section>
 
       <section class="section booking-layout">
-        <iframe
-          src="https://autolekarsro.trial.easytaxioffice.com/booking?site_key=7e3f3d3085b900d598bc40543d611575"
-          id="eto-iframe-booking"
-          allow="geolocation"
-          width="100%"
-          height="250"
-          scrolling="no"
-          frameborder="0"
-          style="width:1px; min-width:100%; border:0;"
-        ></iframe>
+        <div
+          style="
+            width: 100%;
+            max-width: 980px;
+            margin: 0 auto;
+          "
+        >
+          <iframe
+            src="https://autolekarsro.trial.easytaxioffice.com/booking?site_key=7e3f3d3085b900d598bc40543d611575"
+            id="eto-iframe-booking"
+            allow="geolocation"
+            width="100%"
+            height="700"
+            scrolling="no"
+            frameborder="0"
+            style="width:1px; min-width:100%; border:0;"
+          ></iframe>
+        </div>
       </section>
     </main>
 
@@ -122,3 +133,4 @@
     <script src="./script.js"></script>
   </body>
 </html>
+```
