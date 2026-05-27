@@ -1,47 +1,18 @@
-Here’s the full cleaned page with only the EasyTaxiOffice iframe booking system, centered in the page:
-
-```html
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
-
-    <title>
-      Book Luxovia | Chauffeur & Airport Transfer Quote
-    </title>
-
-    <meta
-      name="description"
-      content="Request a quote for Luxovia luxury sedan and luxury van chauffeur service, airport transfers and long-distance EU travel."
-    />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Luxovia | Chauffeur & Airport Transfer Quote</title>
+    <meta name="description" content="Request a quote for Luxovia luxury sedan and luxury van chauffeur service, airport transfers and long-distance EU travel." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-
-    <link
-      rel="preconnect"
-      href="https://fonts.gstatic.com"
-      crossorigin
-    />
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap"
-      rel="stylesheet"
-    />
-
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
-
   <body>
     <header class="site-header" data-header>
-      <a class="brand" href="./index.html">
-        LUXOVIA
-      </a>
-
+      <a class="brand" href="./index.html">LUXOVIA</a>
       <nav class="nav-links">
         <a href="./fleet.html">Fleet</a>
         <a href="./services.html">Services</a>
@@ -51,17 +22,8 @@ Here’s the full cleaned page with only the EasyTaxiOffice iframe booking syste
         <a href="./faq.html">FAQ</a>
         <a href="./contact.html">Contact</a>
       </nav>
-
-      <a class="nav-cta" href="./booking.html">
-        Book now
-      </a>
-
-      <button
-        class="menu-toggle"
-        type="button"
-        aria-label="Toggle navigation"
-        data-menu-toggle
-      >
+      <a class="nav-cta" href="./booking.html">Book now</a>
+      <button class="menu-toggle" type="button" aria-label="Toggle navigation" data-menu-toggle>
         <span></span>
         <span></span>
       </button>
@@ -70,63 +32,37 @@ Here’s the full cleaned page with only the EasyTaxiOffice iframe booking syste
     <main>
       <section class="page-hero booking-page">
         <div class="page-hero-overlay"></div>
-
         <div>
           <h1>Request a chauffeur quote</h1>
-
-          <p>
-            Complete the details below and Luxovia will prepare
-            a quote or confirm via WhatsApp.
-          </p>
+          <p>Complete the details below and Luxovia will prepare a quote or confirm via WhatsApp.</p>
         </div>
       </section>
 
       <section class="section booking-layout">
-        <div
-          style="
-            width: 100%;
-            max-width: 980px;
-            margin: 0 auto;
-          "
-        >
-<iframe src="https://autolekarsro.trial.easytaxioffice.com/booking?site_key=7e3f3d3085b900d598bc40543d611575" id="eto-iframe-booking" allow="geolocation" width="100%" height="250" scrolling="no" frameborder="0" style="width:1px; min-width:100%; border:0;"></iframe>
+        <!-- Premium Centered Frame Container -->
+        <div style="width: 100%; max-width: 980px; margin: 0 auto; background: #111111; border: 1px solid #c5a059; border-radius: 8px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.5);">
+          
+          <!-- Static Hard-Locked Frame (Prevents Redirect Breakouts) -->
+          <iframe 
+            src="https://autolekarsro.trial.easytaxioffice.com/booking" 
+            id="eto-static-booking" 
+            allow="geolocation" 
+            width="100%" 
+            height="550" 
+            frameborder="0" 
+            style="width: 100%; min-width: 100%; border: 0; background: #ffffff; height: 550px; display: block;">
+          </iframe>
 
-<script src="https://autolekarsro.trial.easytaxioffice.com/assets/plugins/iframe-resizer/iframeResizer.min.js"></script>
-
-<script>iFrameResize({log:false, targetOrigin:'*', checkOrigin:false}, "iframe#eto-iframe-booking");</script>
-          ></iframe>
         </div>
       </section>
     </main>
 
     <footer class="site-footer compact">
-      <a class="brand" href="./index.html">
-        LUXOVIA
-      </a>
-
-      <a href="mailto:booking@luxovia.eu">
-        booking@luxovia.eu
-      </a>
-
-      <a href="tel:+421908375787">
-        +421 908 37 57 87
-      </a>
+      <a class="brand" href="./index.html">LUXOVIA</a>
+      <a href="mailto:booking@luxovia.eu">booking@luxovia.eu</a>
+      <a href="tel:+421908375787">+421 908 37 57 87</a>
     </footer>
-
-    <script src="https://autolekarsro.trial.easytaxioffice.com/assets/plugins/iframe-resizer/iframeResizer.min.js"></script>
-
-    <script>
-      iFrameResize(
-        {
-          log: false,
-          targetOrigin: "*",
-          checkOrigin: false
-        },
-        "#eto-iframe-booking"
-      );
-    </script>
 
     <script src="./script.js"></script>
   </body>
 </html>
-```
