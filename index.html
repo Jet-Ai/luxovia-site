@@ -48,28 +48,18 @@
             </div>
           </div>
 
-<!-- Official EasyTaxiOffice Live Booking Widget Container -->
-          <div class="booking-panel reveal" style="padding: 0; background: transparent; overflow: hidden; border: 1px solid #c5a059; border-radius: 8px; box-shadow: 0 20px 40px rgba(0,0,0,0.5);">
+<!-- Permanent Hard-Locked EasyTaxiOffice Booking Engine -->
+          <div class="booking-panel reveal" style="padding: 0; background: transparent; overflow: hidden; border: 1px solid #c5a059; border-radius: 8px; box-shadow: 0 20px 40px rgba(0,0,0,0.5); min-height: 520px;">
             <iframe 
-              src="https://autolekarsro.trial.easytaxioffice.com/booking/widget?site_key=7e3f3d3085b900d598bc40543d611575" 
-              id="eto-iframe-booking-widget" 
+              src="https://autolekarsro.trial.easytaxioffice.com/booking" 
+              id="eto-static-booking"
               allow="geolocation" 
               width="100%" 
-              frameborder="0" 
-              style="width: 1px; min-width: 100%; border: 0; background: transparent; min-height: 550px;">
+              height="520"
+              frameborder="0"
+              style="width: 100%; min-width: 100%; border: 0; background: #ffffff; height: 520px;">
             </iframe>
-            <script src="https://autolekarsro.trial.easytaxioffice.com/assets/plugins/iframe-resizer/iframeResizer.min.js"></script>
-            <script>
-              setTimeout(function() {
-                iFrameResize({
-                  log: false, 
-                  targetOrigin: '*', 
-                  checkOrigin: false,
-                  heightCalculationMethod: 'max'
-                }, "iframe#eto-iframe-booking-widget");
-              }, 100);
-            </script>
-          </div>        </div>
+          </div>
       </section>
 
       <section class="trust-bar" aria-label="Service highlights">
