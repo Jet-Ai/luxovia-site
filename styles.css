@@ -1198,3 +1198,40 @@ body::selection {
     height: 62px;
   }
 }
+.eto-booking-shell {
+  display: grid;
+  gap: 16px;
+  min-width: 0;
+  max-height: min(760px, calc(100vh - 190px));
+  overflow: auto;
+  padding: 20px;
+  background:
+    linear-gradient(145deg, rgba(255, 229, 142, 0.09), rgba(7, 4, 2, 0.9) 34%),
+    rgba(13, 9, 5, 0.9);
+  border: 1px solid rgba(244, 189, 66, 0.28);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(20px);
+  scrollbar-width: thin;
+  scrollbar-color: var(--gold) rgba(255, 255, 255, 0.08);
+}
+
+.eto-booking-frame {
+  display: block;
+  width: 1px;
+  min-width: 100%;
+  min-height: 620px;
+  border: 0;
+  background: transparent;
+}
+
+@media (max-width: 720px) {
+  .eto-booking-shell {
+    padding: 16px;
+    max-height: none;
+  }
+
+  .eto-booking-frame {
+    min-height: 720px;
+  }
+}
+
