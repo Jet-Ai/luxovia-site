@@ -47,25 +47,17 @@
               <a class="button ghost" href="https://checkout.revolut.com/pay/4ac6b9e8-836e-464c-9d63-3ee742e89c52" target="_blank" rel="noopener">Pay confirmed booking</a>
             </div>
           </div>
-          <form class="booking-panel reveal" data-booking-form>
-            <div class="panel-title">
-              <strong>Instant booking request</strong>
-              <span>Response in minutes, 24/7</span>
-            </div>
-            <label>Pickup location<input name="pickup" placeholder="Bratislava city centre" required /></label>
-            <label>Destination<input name="destination" placeholder="Vienna International Airport" required /></label>
-            <div class="form-row">
-              <label>Date & time<input type="datetime-local" name="datetime" required /></label>
-              <label>Passengers<select name="passengers"><option>1</option><option>2</option><option>3</option><option>4</option><option>5+</option></select></label>
-            </div>
-            <div class="form-row">
-              <label>Luggage<select name="luggage"><option>1</option><option>2</option><option>3</option><option>4+</option></select></label>
-              <label>Vehicle<select name="vehicle"><option>Mercedes E-Class</option><option>Mercedes S-Class</option><option>Mercedes V-Class</option><option>Business Van</option></select></label>
-            </div>
-            <button class="button primary full" type="submit">Get estimated quote</button>
-            <a class="button ghost full payment-link" href="https://checkout.revolut.com/pay/4ac6b9e8-836e-464c-9d63-3ee742e89c52" target="_blank" rel="noopener">Pay confirmed quote by card</a>
-            <a class="quote-link" href="./booking.html">Need a custom corporate quote?</a>
-          </form>
+
+          <!-- EasyTaxiOffice Live Booking Widget -->
+          <div class="booking-panel reveal" style="padding: 0; background: transparent; overflow: hidden; min-height: 500px;">
+            <iframe 
+              src="https://autolekarsro.trial.easytaxioffice.com/booking" 
+              style="width: 100%; height: 500px; border: none; border-radius: 8px; background: #ffffff;"
+              scrolling="yes" 
+              loading="lazy"
+              title="Luxovia Live Booking Engine">
+            </iframe>
+          </div>
         </div>
       </section>
 
@@ -96,7 +88,7 @@
         <div class="fleet-grid">
           <article class="vehicle-card"><img src="https://mercedes-benz-media.co.uk/assets/images/hero/47963-mercedes-vclass-0076.jpg" alt="Black premium van" /><div><h3>Mercedes V-Class</h3><p>Up to 7 passengers, 7 luggage, leather cabin, ideal for VIP airport and hotel transfers.</p></div></article>
           <article class="vehicle-card"><img src="https://www.mercedes-benz.com/assets/vehicles/s-class/pad/stage/mercedes-benz-s-class-pad-side-view-01-2026-master16x9.jpg?im=Resize=(1920)" alt="Black executive sedan" /><div><h3>Luxury Sedan</h3><p>Up to 3 passengers, executive rear comfort, privacy glass and first-class ride quality.</p></div></article>
-                  </div>
+        </div>
       </section>
 
       <section class="section services-section reveal" aria-labelledby="services-title">
@@ -130,9 +122,7 @@
         <div class="section-kicker">Client confidence</div>
         <h2 id="reviews-title">Trusted by travelers who cannot afford uncertainty</h2>
         <div class="review-grid">
-          <blockquote><p>"“Excellent Bratislava–Vienna Airport transfer.
-Fast communication and very clean vehicle.”
-            "</p><cite>— Martin K., Slovakia</cite></blockquote>
+          <blockquote><p>"Excellent Bratislava–Vienna Airport transfer. Fast communication and very clean vehicle."</p><cite>— Martin K., Slovakia</cite></blockquote>
           <blockquote><p>"Discreet, punctual and very easy to coordinate. Exactly what our hotel guests expect from a premium chauffeur partner."</p><cite>Abdullah A., Dubai</cite></blockquote>
           <blockquote><p>"The driver was waiting before landing, the vehicle was immaculate and communication was immediate."</p><cite>Private aviation client</cite></blockquote>
         </div>
