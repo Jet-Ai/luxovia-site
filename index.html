@@ -48,20 +48,81 @@
             </div>
           </div>
 
-<!-- Permanent Hard-Locked EasyTaxiOffice Booking Engine -->
-          <div class="booking-panel reveal" style="padding: 0; background: transparent; overflow: hidden; border: 1px solid #c5a059; border-radius: 8px; box-shadow: 0 20px 40px rgba(0,0,0,0.5); min-height: 520px;">
-            <iframe 
-              src="https://autolekarsro.trial.easytaxioffice.com/booking" 
-              id="eto-static-booking"
-              allow="geolocation" 
-              width="100%" 
-              height="520"
-              frameborder="0"
-              style="width: 100%; min-width: 100%; border: 0; background: #ffffff; height: 520px;">
-            </iframe>
-          </div>
-      </section>
+<!-- Premium Manual Chauffeur Booking Engine Box -->
+<div class="booking-panel reveal" style="padding: 2.5rem; background: #0c0c0c; border: 1px solid #c5a059; border-radius: 8px; box-shadow: 0 20px 40px rgba(0,0,0,0.6); min-height: 520px; font-family: sans-serif; color: #ffffff;">
+  <h3 style="color: #c5a059; margin-top: 0; margin-bottom: 1.5rem; font-size: 1.5rem; letter-spacing: 1px; text-transform: uppercase;">Request a VIP Transfer</h3>
+  
+  <form id="luxovia-manual-booking" style="display: flex; flex-direction: column; gap: 1rem;">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+      <div>
+        <label style="display: block; font-size: 0.8rem; color: #888; text-transform: uppercase; margin-bottom: 0.25rem;">Pickup Location</label>
+        <input type="text" id="bk-pickup" placeholder="e.g., Bratislava Airport" required style="width: 100%; padding: 0.75rem; background: #141414; border: 1px solid #333; border-radius: 4px; color: #fff; font-size: 0.9rem;">
+      </div>
+      <div>
+        <label style="display: block; font-size: 0.8rem; color: #888; text-transform: uppercase; margin-bottom: 0.25rem;">Dropoff Location</label>
+        <input type="text" id="bk-dropoff" placeholder="e.g., Vienna City" required style="width: 100%; padding: 0.75rem; background: #141414; border: 1px solid #333; border-radius: 4px; color: #fff; font-size: 0.9rem;">
+      </div>
+    </div>
 
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+      <div>
+        <label style="display: block; font-size: 0.8rem; color: #888; text-transform: uppercase; margin-bottom: 0.25rem;">Date</label>
+        <input type="date" id="bk-date" required style="width: 100%; padding: 0.75rem; background: #141414; border: 1px solid #333; border-radius: 4px; color: #fff; font-size: 0.9rem;">
+      </div>
+      <div>
+        <label style="display: block; font-size: 0.8rem; color: #888; text-transform: uppercase; margin-bottom: 0.25rem;">Time</label>
+        <input type="time" id="bk-time" required style="width: 100%; padding: 0.75rem; background: #141414; border: 1px solid #333; border-radius: 4px; color: #fff; font-size: 0.9rem;">
+      </div>
+    </div>
+
+    <div>
+      <label style="display: block; font-size: 0.8rem; color: #888; text-transform: uppercase; margin-bottom: 0.25rem;">Select Service Fleet</label>
+      <select id="bk-fleet" style="width: 100%; padding: 0.75rem; background: #141414; border: 1px solid #333; border-radius: 4px; color: #fff; font-size: 0.9rem;">
+        <option value="Business Class (Mercedes-Benz E-Class)">Business Class (E-Class)</option>
+        <option value="First Class (Mercedes-Benz S-Class)">First Class (S-Class)</option>
+        <option value="Business Van (Mercedes-Benz V-Class)">Business Van (V-Class)</option>
+      </select>
+    </div>
+
+    <div>
+      <label style="display: block; font-size: 0.8rem; color: #888; text-transform: uppercase; margin-bottom: 0.25rem;">Your Full Name</label>
+      <input type="text" id="bk-name" placeholder="John Doe" required style="width: 100%; padding: 0.75rem; background: #141414; border: 1px solid #333; border-radius: 4px; color: #fff; font-size: 0.9rem;">
+    </div>
+
+    <div style="margin-top: 1rem;">
+      <button type="submit" style="width: 100%; padding: 1rem; background: linear-gradient(135deg, #c5a059 0%, #a37f3d 100%); border: none; border-radius: 4px; color: #000; font-weight: bold; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; cursor: pointer; transition: opacity 0.2s;">
+        Book via WhatsApp Now
+      </button>
+    </div>
+  </form>
+</div>
+
+<script>
+  document.getElementById('luxovia-manual-booking').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const pickup = document.getElementById('bk-pickup').value;
+    const dropoff = document.getElementById('bk-dropoff').value;
+    const date = document.getElementById('bk-date').value;
+    const time = document.getElementById('bk-time').value;
+    const fleet = document.getElementById('bk-fleet').value;
+    const name = document.getElementById('bk-name').value;
+
+    // Constructs a clear professional reservation readout message
+    const message = `✨ *LUXOVIA VIP TRANSFER REQUEST* ✨\n\n` +
+                    `👤 *Client Name:* ${name}\n` +
+                    `📍 *Pickup:* ${pickup}\n` +
+                    `🏁 *Dropoff:* ${dropoff}\n` +
+                    `📅 *Date:* ${date}\n` +
+                    `⏰ *Time:* ${time}\n` +
+                    `🚘 *Fleet Vehicle:* ${fleet}`;
+
+    const encodedMessage = encodeURIComponent(message);
+    
+    // Fires it straight directly to your phone lines setup
+    window.open(`https://wa.me/421948199999?text=${encodedMessage}`, '_blank');
+  });
+</script>
       <section class="trust-bar" aria-label="Service highlights">
         <span>Bratislava based</span><span>Vienna Airport specialists</span><span>Multilingual chauffeurs</span><span>24/7 availability</span><span>Discreet service</span>
       </section>
