@@ -1,17 +1,16 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Luxovia | Premium Chauffeur & Airport Transfers Across Europe</title>
-    <meta name="description" content="Luxovia provides VIP airport transfers, chauffeur service in Bratislava, Vienna chauffeur rides, private aviation transfers, and executive transport across Slovakia and Europe." />
-    <meta name="keywords" content="Bratislava airport transfer, Vienna airport transfer, VIP transfer Slovakia, chauffeur service Bratislava, Vienna chauffeur, executive transport Slovakia, luxury airport taxi Bratislava" />
+    <meta name="description" content="Book premium VIP airport transfers and chauffeur service from Bratislava to Vienna, Budapest, Prague and destinations across Central Europe." />
+    <meta name="keywords" content="Bratislava airport transfer, Vienna airport transfer, VIP transfer Slovakia, chauffeur service Bratislava, Vienna chauffeur, executive transport Slovakia" />
     <link rel="canonical" href="https://luxovia.eu/" />
-    <meta property="og:title" content="Luxovia | Premium Chauffeur & Airport Transfers Across Europe" />
-    <meta property="og:description" content="Luxury chauffeur service based in Bratislava for airport transfers, executives, hotels, embassies, private aviation and long-distance EU rides." />
+    <meta property="og:title" content="Luxovia | Premium Chauffeur & Airport Transfers" />
+    <meta property="og:description" content="Discreet VIP transfers, executive chauffeur service and premium European rides from Bratislava." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://luxovia.eu/" />
-    <link rel="preconnect" href="https://images.unsplash.com" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
@@ -21,219 +20,164 @@
     <header class="site-header" data-header>
       <a class="brand" href="./index.html" aria-label="Luxovia home">LUXOVIA</a>
       <nav class="nav-links" aria-label="Primary navigation">
-        <a href="./fleet.html">Fleet</a>
-        <a href="./services.html">Services</a>
-        <a href="./airport-transfers.html">Airport Transfers</a>
-        <a href="./business-chauffeur.html">Business Chauffeur</a>
-        <a href="./corporate-accounts.html">Corporate</a>
-        <a href="./journal.html">Journal</a>
-        <a href="./faq.html">FAQ</a>
-        <a href="./contact.html">Contact</a>
+        <a href="./fleet.html" data-i18n="navFleet">Fleet</a>
+        <a href="./services.html" data-i18n="navServices">Services</a>
+        <a href="./airport-transfers.html" data-i18n="navAirports">Airport Transfers</a>
+        <a href="./business-chauffeur.html" data-i18n="navBusiness">Business Chauffeur</a>
+        <a href="./corporate-accounts.html" data-i18n="navCorporate">Corporate</a>
+        <a href="./faq.html" data-i18n="navFaq">FAQ</a>
+        <a href="./contact.html" data-i18n="navContact">Contact</a>
       </nav>
-      <a class="nav-cta" href="./booking.html">Book now</a>
-      <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" data-menu-toggle><span></span><span></span></button>
+      <div class="header-actions">
+        <label class="language-select" aria-label="Language">
+          <span aria-hidden="true">◎</span>
+          <select id="language-selector">
+            <option value="en">EN</option>
+            <option value="sk">SK</option>
+            <option value="ar">AR</option>
+            <option value="ru">RU</option>
+            <option value="tr">TR</option>
+          </select>
+        </label>
+        <a class="nav-cta" href="#booking" data-i18n="bookNow">Book now</a>
+        <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" data-menu-toggle><span></span><span></span></button>
+      </div>
     </header>
 
     <main>
       <section class="hero home-hero" aria-labelledby="hero-title">
         <div class="hero-media"></div>
         <div class="hero-overlay"></div>
-        <div class="hero-inner">
+        <div class="hero-inner booking-hero-inner">
           <div class="hero-copy reveal">
-            <h1 id="hero-title"><span class="desktop-heading">Premium Chauffeur &<br />Airport Transfers<br />Across Europe</span><span class="mobile-heading">Premium<br />Chauffeur &<br />Airport<br />Transfers<br />Across Europe</span></h1>
-            <p>Luxovia delivers discreet VIP airport transfers, executive chauffeur service and long-distance premium rides from Bratislava to Vienna, Budapest, Prague and beyond.</p>
-            <div class="hero-actions">
-              <a class="button primary" href="./booking.html">Request a quote</a>
-              <a class="button ghost" href="https://wa.me/421908375787" target="_blank" rel="noopener">WhatsApp now</a>
-              <a class="button ghost" href="https://checkout.revolut.com/pay/4ac6b9e8-836e-464c-9d63-3ee742e89c52" target="_blank" rel="noopener">Pay confirmed booking</a>
+            <h1 id="hero-title" data-i18n="heroTitle">Premium Chauffeur & Airport Transfers Across Europe</h1>
+            <p data-i18n="heroCopy">Discreet VIP airport transfers, executive chauffeur service and long-distance premium rides from Bratislava to Vienna, Budapest, Prague and beyond.</p>
+            <div class="hero-proof">
+              <div><strong>24/7</strong><span data-i18n="proofSupport">Flight tracking & support</span></div>
+              <div><strong data-i18n="proofDiscreetTitle">Discreet</strong><span data-i18n="proofDiscreet">Professional chauffeurs</span></div>
+              <div><strong data-i18n="proofFixedTitle">Clear</strong><span data-i18n="proofFixed">Confirmed price before travel</span></div>
             </div>
           </div>
 
-          <!-- Premium Manual Chauffeur Booking Engine Box -->
-          <div class="booking-panel reveal" style="padding: 2.5rem; background: #0c0c0c; border: 1px solid #c5a059; border-radius: 8px; box-shadow: 0 20px 40px rgba(0,0,0,0.6); min-height: 520px; font-family: sans-serif; color: #ffffff;">
-            <h3 style="color: #c5a059; margin-top: 0; margin-bottom: 1.5rem; font-size: 1.5rem; letter-spacing: 1px; text-transform: uppercase;">Request a VIP Transfer</h3>
-            
-            <form id="luxovia-manual-booking" style="display: flex; flex-direction: column; gap: 1rem;">
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-                <div>
-                  <label style="display: block; font-size: 0.8rem; color: #888; text-transform: uppercase; margin-bottom: 0.25rem;">Pickup Location</label>
-                  <input type="text" id="bk-pickup" placeholder="e.g., Bratislava Airport" required style="width: 100%; padding: 0.75rem; background: #141414; border: 1px solid #333; border-radius: 4px; color: #fff; font-size: 0.9rem;">
-                </div>
-                <div>
-                  <label style="display: block; font-size: 0.8rem; color: #888; text-transform: uppercase; margin-bottom: 0.25rem;">Dropoff Location</label>
-                  <input type="text" id="bk-dropoff" placeholder="e.g., Vienna City" required style="width: 100%; padding: 0.75rem; background: #141414; border: 1px solid #333; border-radius: 4px; color: #fff; font-size: 0.9rem;">
-                </div>
-              </div>
-
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-                <div>
-                  <label style="display: block; font-size: 0.8rem; color: #888; text-transform: uppercase; margin-bottom: 0.25rem;">Date</label>
-                  <input type="date" id="bk-date" required style="width: 100%; padding: 0.75rem; background: #141414; border: 1px solid #333; border-radius: 4px; color: #fff; font-size: 0.9rem;">
-                </div>
-                <div>
-                  <label style="display: block; font-size: 0.8rem; color: #888; text-transform: uppercase; margin-bottom: 0.25rem;">Time</label>
-                  <input type="time" id="bk-time" required style="width: 100%; padding: 0.75rem; background: #141414; border: 1px solid #333; border-radius: 4px; color: #fff; font-size: 0.9rem;">
-                </div>
-              </div>
-
+          <section class="lux-booking reveal" id="booking" aria-labelledby="booking-title">
+            <div class="booking-heading">
               <div>
-                <label style="display: block; font-size: 0.8rem; color: #888; text-transform: uppercase; margin-bottom: 0.25rem;">Select Service Fleet</label>
-                <select id="bk-fleet" style="width: 100%; padding: 0.75rem; background: #141414; border: 1px solid #333; border-radius: 4px; color: #fff; font-size: 0.9rem;">
-                  <option value="Business Class (Mercedes-Benz E-Class)">Business Class (E-Class)</option>
-                  <option value="First Class (Mercedes-Benz S-Class)">First Class (S-Class)</option>
-                  <option value="Business Van (Mercedes-Benz V-Class)">Business Van (V-Class)</option>
+                <span class="booking-step" data-i18n="bookingKicker">Private booking</span>
+                <h2 id="booking-title" data-i18n="bookingTitle">Book your ride</h2>
+              </div>
+              <span class="secure-note" data-i18n="responseTime">Fast confirmation</span>
+            </div>
+
+            <form id="luxovia-booking-form" novalidate>
+              <div class="booking-grid booking-grid-locations">
+                <label class="location-field">
+                  <span data-i18n="pickup">Pickup location</span>
+                  <input id="booking-pickup" name="pickup" type="text" autocomplete="off" placeholder="Airport, hotel or address" data-i18n-placeholder="pickupPlaceholder" required />
+                  <div class="location-suggestions" data-suggestions-for="booking-pickup" role="listbox"></div>
+                </label>
+                <label class="location-field">
+                  <span data-i18n="destination">Destination</span>
+                  <input id="booking-destination" name="destination" type="text" autocomplete="off" placeholder="City, airport or address" data-i18n-placeholder="destinationPlaceholder" required />
+                  <div class="location-suggestions" data-suggestions-for="booking-destination" role="listbox"></div>
+                </label>
+              </div>
+
+              <p class="radius-note" data-i18n="radiusNote">Suggestions are limited to approximately 300 km from Bratislava centre.</p>
+
+              <div class="booking-grid booking-grid-compact">
+                <label><span data-i18n="date">Date</span><input name="date" type="date" required /></label>
+                <label><span data-i18n="time">Time</span><input name="time" type="time" required /></label>
+                <label><span data-i18n="passengers">Passengers</span><select name="passengers"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option></select></label>
+                <label><span data-i18n="luggage">Luggage</span><select name="luggage"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6+</option></select></label>
+              </div>
+
+              <label>
+                <span data-i18n="vehicle">Vehicle class</span>
+                <select name="vehicle">
+                  <option value="Business Class (Mercedes-Benz E-Class)" data-capacity="3" data-i18n="vehicleBusiness">Business Class — E-Class, up to 3</option>
+                  <option value="First Class (Mercedes-Benz S-Class)" data-capacity="3" data-i18n="vehicleFirst">First Class — S-Class, up to 3</option>
+                  <option value="Business Van (Mercedes-Benz V-Class)" data-capacity="7" data-i18n="vehicleVan">Business Van — V-Class, up to 7</option>
                 </select>
+              </label>
+
+              <div class="booking-grid booking-grid-compact">
+                <label><span data-i18n="name">Full name</span><input name="name" type="text" autocomplete="name" placeholder="Your full name" data-i18n-placeholder="namePlaceholder" required /></label>
+                <label><span data-i18n="phone">Phone / WhatsApp</span><input name="phone" type="tel" autocomplete="tel" placeholder="+421..." data-i18n-placeholder="phonePlaceholder" required /></label>
               </div>
 
-              <div>
-                <label style="display: block; font-size: 0.8rem; color: #888; text-transform: uppercase; margin-bottom: 0.25rem;">Your Full Name</label>
-                <input type="text" id="bk-name" placeholder="John Doe" required style="width: 100%; padding: 0.75rem; background: #141414; border: 1px solid #333; border-radius: 4px; color: #fff; font-size: 0.9rem;">
+              <div class="booking-options">
+                <label class="toggle-row"><input name="returnTrip" type="checkbox" /><span data-i18n="returnTrip">Return journey</span></label>
+                <label class="toggle-row"><input name="airportPickup" type="checkbox" /><span data-i18n="airportPickup">Airport pickup</span></label>
               </div>
 
-              <div style="margin-top: 1rem;">
-                <button type="submit" style="width: 100%; padding: 1rem; background: linear-gradient(135deg, #c5a059 0%, #a37f3d 100%); border: none; border-radius: 4px; color: #000; font-weight: bold; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; cursor: pointer; transition: opacity 0.2s;">
-                  Book via WhatsApp Now
-                </button>
+              <div class="booking-grid booking-grid-compact booking-optional">
+                <label><span data-i18n="flight">Flight number</span><input name="flight" type="text" placeholder="e.g. OS 301" data-i18n-placeholder="flightPlaceholder" /></label>
+                <label><span data-i18n="notes">Additional information</span><input name="notes" type="text" placeholder="Child seat, stopovers..." data-i18n-placeholder="notesPlaceholder" /></label>
               </div>
+
+              <p class="booking-error" role="alert" aria-live="polite"></p>
+              <button class="button primary full booking-submit" type="submit" data-i18n="reviewBooking">Review booking</button>
+              <p class="booking-privacy" data-i18n="privacy">No payment is required now. We confirm availability and price first.</p>
             </form>
-          </div>
+          </section>
         </div>
       </section>
 
-      <script>
-        document.getElementById('luxovia-manual-booking').addEventListener('submit', function(e) {
-          e.preventDefault();
-          
-          const pickup = document.getElementById('bk-pickup').value;
-          const dropoff = document.getElementById('bk-dropoff').value;
-          const date = document.getElementById('bk-date').value;
-          const time = document.getElementById('bk-time').value;
-          const fleet = document.getElementById('bk-fleet').value;
-          const name = document.getElementById('bk-name').value;
-
-          const message = `✨ *LUXOVIA VIP TRANSFER REQUEST* ✨\n\n` +
-                          `👤 *Client Name:* ${name}\n` +
-                          `📍 *Pickup:* ${pickup}\n` +
-                          `🏁 *Dropoff:* ${dropoff}\n` +
-                          `📅 *Date:* ${date}\n` +
-                          `⏰ *Time:* ${time}\n` +
-                          `🚘 *Fleet Vehicle:* ${fleet}`;
-
-          const encodedMessage = encodeURIComponent(message);
-          
-          // Realigned dynamically to match operational lines
-          window.open(`https://wa.me/421908375787?text=${encodedMessage}`, '_blank');
-        });
-      </script>
-
       <section class="trust-bar" aria-label="Service highlights">
-        <span>Bratislava based</span><span>Vienna Airport specialists</span><span>Multilingual chauffeurs</span><span>24/7 availability</span><span>Discreet service</span>
+        <span data-i18n="trustBased">Bratislava based</span>
+        <span data-i18n="trustAirport">Vienna Airport specialists</span>
+        <span data-i18n="trustLanguages">Multilingual chauffeurs</span>
+        <span data-i18n="trustAlways">24/7 availability</span>
+        <span data-i18n="trustDiscreet">Discreet service</span>
       </section>
-<!-- Re-engineered Robust Pricing Section -->
-      <section class="section pricing-section reveal" aria-labelledby="pricing-title" style="padding: 5rem 0; background: #000000; color: #ffffff;">
-        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 1.5rem;">
-          
-          <div class="section-kicker" style="color: #c5a059; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">Popular airport routes</div>
-          
-          <div class="section-head split" style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 3.5rem; border-bottom: 1px solid rgba(197, 160, 89, 0.2); padding-bottom: 1.5rem;">
-            <h2 id="pricing-title" style="color: #ffffff; font-size: 2.5rem; margin: 0; font-family: 'Playfair Display', serif; line-height: 1.2;">Clear examples for premium transfers</h2>
-            <p style="color: #888888; font-size: 1.05rem; margin: 0; max-width: 700px; line-height: 1.6;">Final quotes depend on pickup time, vehicle class, waiting time and special requirements. Every ride includes a professional chauffeur, clean premium vehicle and live communication.</p>
-          </div>
-          
-          <div class="price-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; width: 100%;">
-            <article style="background: #0c0c0c; border: 1px solid rgba(197, 160, 89, 0.3); padding: 2rem; border-radius: 6px; display: flex; flex-direction: column; justify-content: space-between; min-height: 180px;">
-              <span style="color: #c5a059; font-size: 1.1rem; font-weight: 500; display: block; margin-bottom: 1rem;">Bratislava - Vienna Airport</span>
-              <div>
-                <strong style="font-size: 1.6rem; color: #ffffff; display: block; margin-bottom: 0.25rem;">from EUR 119</strong>
-                <small style="color: #666666; font-size: 0.85rem;">Approx. 45-60 min</small>
-              </div>
-            </article>
-            
-            <article style="background: #0c0c0c; border: 1px solid rgba(197, 160, 89, 0.3); padding: 2rem; border-radius: 6px; display: flex; flex-direction: column; justify-content: space-between; min-height: 180px;">
-              <span style="color: #c5a059; font-size: 1.1rem; font-weight: 500; display: block; margin-bottom: 1rem;">Bratislava - Budapest</span>
-              <div>
-                <strong style="font-size: 1.6rem; color: #ffffff; display: block; margin-bottom: 0.25rem;">from EUR 349</strong>
-                <small style="color: #666666; font-size: 0.85rem;">Premium EU transfer</small>
-              </div>
-            </article>
-            
-            <article style="background: #0c0c0c; border: 1px solid rgba(197, 160, 89, 0.3); padding: 2rem; border-radius: 6px; display: flex; flex-direction: column; justify-content: space-between; min-height: 180px;">
-              <span style="color: #c5a059; font-size: 1.1rem; font-weight: 500; display: block; margin-bottom: 1rem;">Vienna Airport - Bratislava</span>
-              <div>
-                <strong style="font-size: 1.6rem; color: #ffffff; display: block; margin-bottom: 0.25rem;">from EUR 119</strong>
-                <small style="color: #666666; font-size: 0.85rem;">Meet & greet available</small>
-              </div>
-            </article>
-            
-            <article style="background: #0c0c0c; border: 1px solid rgba(197, 160, 89, 0.3); padding: 2rem; border-radius: 6px; display: flex; flex-direction: column; justify-content: space-between; min-height: 180px;">
-              <span style="color: #c5a059; font-size: 1.1rem; font-weight: 500; display: block; margin-bottom: 1rem;">Bratislava - Prague</span>
-              <div>
-                <strong style="font-size: 1.6rem; color: #ffffff; display: block; margin-bottom: 0.25rem;">from EUR 590</strong>
-                <small style="color: #666666; font-size: 0.85rem;">Executive long-distance ride</small>
-              </div>
-            </article>
-          </div>
 
+      <section class="section pricing-section reveal" aria-labelledby="pricing-title">
+        <div class="section-kicker" data-i18n="routesKicker">Popular airport routes</div>
+        <div class="section-head split">
+          <h2 id="pricing-title" data-i18n="routesTitle">Clear examples for premium transfers</h2>
+          <p data-i18n="routesCopy">Every journey includes a professional chauffeur, clean premium vehicle and live communication.</p>
+        </div>
+        <div class="price-grid">
+          <article><span>Bratislava → Vienna Airport</span><strong>from EUR 119</strong><small>45–60 min</small></article>
+          <article><span>Bratislava → Budapest</span><strong>from EUR 349</strong><small>Premium EU transfer</small></article>
+          <article><span>Vienna Airport → Bratislava</span><strong>from EUR 119</strong><small>Meet & greet available</small></article>
+          <article><span>Bratislava → Prague</span><strong>from EUR 590</strong><small>Executive long-distance ride</small></article>
         </div>
       </section>
 
       <section class="section dark-section reveal" id="fleet" aria-labelledby="fleet-title">
-        <div class="section-kicker">Luxury fleet</div>
+        <div class="section-kicker" data-i18n="fleetKicker">Luxury fleet</div>
         <div class="section-head split">
-          <h2 id="fleet-title">Premium vehicles for every executive transfer</h2>
-          <a class="text-link" href="./fleet.html">View full fleet</a>
+          <h2 id="fleet-title" data-i18n="fleetTitle">Premium vehicles for every executive transfer</h2>
+          <a class="text-link" href="./fleet.html" data-i18n="viewFleet">View full fleet</a>
         </div>
-        <div class="fleet-grid">
-          <article class="vehicle-card"><img src="https://mercedes-benz-media.co.uk/assets/images/hero/47963-mercedes-vclass-0076.jpg" alt="Black premium van" /><div><h3>Mercedes V-Class</h3><p>Up to 7 passengers, 7 luggage, leather cabin, ideal for VIP airport and hotel transfers.</p></div></article>
-          <article class="vehicle-card"><img src="https://www.mercedes-benz.com/assets/vehicles/s-class/pad/stage/mercedes-benz-s-class-pad-side-view-01-2026-master16x9.jpg?im=Resize=(1920)" alt="Black executive sedan" /><div><h3>Luxury Sedan</h3><p>Up to 3 passengers, executive rear comfort, privacy glass and first-class ride quality.</p></div></article>
+        <div class="fleet-grid fleet-grid-home">
+          <article class="vehicle-card"><img src="https://mercedes-benz-media.co.uk/assets/images/hero/47963-mercedes-vclass-0076.jpg" alt="Mercedes-Benz V-Class" /><div><h3>Mercedes V-Class</h3><p data-i18n="vClassCopy">Up to 7 passengers with generous luggage space for airport and group transfers.</p></div></article>
+          <article class="vehicle-card"><img src="https://www.mercedes-benz.com/assets/vehicles/s-class/pad/stage/mercedes-benz-s-class-pad-side-view-01-2026-master16x9.jpg?im=Resize=(1920)" alt="Mercedes-Benz luxury sedan" /><div><h3 data-i18n="sedanTitle">Luxury Sedan</h3><p data-i18n="sedanCopy">Up to 3 passengers with executive rear comfort and first-class ride quality.</p></div></article>
         </div>
       </section>
 
       <section class="section services-section reveal" aria-labelledby="services-title">
-        <div class="section-kicker">Core services</div>
-        <div class="section-head centered"><h2 id="services-title">Built for business travelers, embassies, hotels and private aviation</h2></div>
+        <div class="section-kicker" data-i18n="servicesKicker">Core services</div>
+        <div class="section-head centered"><h2 id="services-title" data-i18n="servicesTitle">Built for business travelers, hotels and private aviation</h2></div>
         <div class="service-grid">
-          <a href="./airport-transfers.html"><h3>VIP airport transfers</h3><p>Bratislava, Vienna International Airport, Budapest and Prague with flight tracking and meet & greet.</p></a>
-          <a href="./business-chauffeur.html"><h3>Business chauffeur service</h3><p>Hourly executive chauffeur hire for meetings, delegations, roadshows and confidential appointments.</p></a>
-          <a href="./services.html"><h3>Private aviation transfers</h3><p>FBO pickup coordination, discreet service and premium vehicles for jet clients.</p></a>
-          <a href="./services.html"><h3>Hotel & event transfers</h3><p>Reliable premium transport for luxury hotels, conferences, weddings, diplomatic visits and VIP guests.</p></a>
-          <a href="./corporate-accounts.html"><h3>Corporate transportation</h3><p>Account management, monthly invoicing, priority availability and consistent service standards.</p></a>
-          <a href="./services.html"><h3>Long-distance EU transfers</h3><p>Comfortable door-to-door travel between Slovakia, Austria, Czechia, Hungary and the wider EU.</p></a>
+          <a href="./airport-transfers.html"><h3 data-i18n="serviceAirportTitle">VIP airport transfers</h3><p data-i18n="serviceAirportCopy">Flight tracking, meet & greet and direct airport transfers across Central Europe.</p></a>
+          <a href="./business-chauffeur.html"><h3 data-i18n="serviceBusinessTitle">Business chauffeur</h3><p data-i18n="serviceBusinessCopy">Hourly service for meetings, delegations, roadshows and confidential appointments.</p></a>
+          <a href="./services.html"><h3 data-i18n="serviceAviationTitle">Private aviation</h3><p data-i18n="serviceAviationCopy">Discreet FBO transfer coordination for private jet passengers and crews.</p></a>
+          <a href="./services.html"><h3 data-i18n="serviceHotelTitle">Hotel & event transfers</h3><p data-i18n="serviceHotelCopy">Reliable premium transport for hotels, conferences, weddings and VIP guests.</p></a>
+          <a href="./corporate-accounts.html"><h3 data-i18n="serviceCorporateTitle">Corporate transportation</h3><p data-i18n="serviceCorporateCopy">Priority availability, centralized booking and monthly invoicing.</p></a>
+          <a href="./services.html"><h3 data-i18n="serviceLongTitle">Long-distance EU rides</h3><p data-i18n="serviceLongCopy">Comfortable door-to-door travel across Slovakia and neighboring countries.</p></a>
         </div>
-      </section>
-
-      <section class="section why-section reveal" aria-labelledby="why-title">
-        <div class="why-image"></div>
-        <div class="why-copy">
-          <div class="section-kicker">Why Luxovia</div>
-          <h2 id="why-title">The calmest part of your journey</h2>
-          <div class="why-list">
-            <div><strong>Fast communication</strong><p>WhatsApp, phone and email support with quick quote handling and live ride coordination.</p></div>
-            <div><strong>Professional discretion</strong><p>Trusted service for executives, embassies, private jet clients and high-profile visitors.</p></div>
-            <div><strong>Clean premium vehicles</strong><p>Modern Mercedes-class fleet, prepared before every ride and presented to corporate standards.</p></div>
-            <div><strong>Multilingual chauffeurs</strong><p>English-speaking drivers with local knowledge across Bratislava, Vienna, Budapest and Prague.</p></div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section testimonials reveal" aria-labelledby="reviews-title">
-        <div class="section-kicker">Client confidence</div>
-        <h2 id="reviews-title">Trusted by travelers who cannot afford uncertainty</h2>
-        <div class="review-grid">
-          <blockquote><p>"Excellent Bratislava–Vienna Airport transfer. Fast communication and very clean vehicle."</p><cite>— Martin K., Slovakia</cite></blockquote>
-          <blockquote><p>"Discreet, punctual and very easy to coordinate. Exactly what our hotel guests expect from a premium chauffeur partner."</p><cite>Abdullah A., Dubai</cite></blockquote>
-          <blockquote><p>"The driver was waiting before landing, the vehicle was immaculate and communication was immediate."</p><cite>Private aviation client</cite></blockquote>
-        </div>
-      </section>
-
-      <section class="partner-strip" aria-label="Partner categories">
-        <span>Luxury hotels</span><span>Airports</span><span>Private aviation</span><span>Embassies</span><span>Corporations</span>
       </section>
 
       <section class="cta-band reveal">
-        <h2>Book a premium transfer in minutes</h2>
-        <p>Tell us your route, passenger count and vehicle preference. Luxovia will confirm availability and pricing quickly.</p>
-        <div class="hero-actions"><a class="button primary" href="./booking.html">Start booking</a><a class="button ghost" href="https://checkout.revolut.com/pay/4ac6b9e8-836e-464c-9d63-3ee742e89c52" target="_blank" rel="noopener">Pay confirmed booking</a><a class="button ghost" href="tel:+421908375787">Call now</a></div>
+        <h2 data-i18n="ctaTitle">Your journey, handled personally</h2>
+        <p data-i18n="ctaCopy">Book online or speak directly with Luxovia for a tailored transfer.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#booking" data-i18n="startBooking">Start booking</a>
+          <a class="button ghost" href="https://wa.me/421908375787" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="button ghost" href="tel:+421908375787" data-i18n="callNow">Call now</a>
+        </div>
       </section>
     </main>
 
@@ -241,15 +185,29 @@
     <a class="float-whatsapp" href="https://wa.me/421908375787" target="_blank" rel="noopener" aria-label="Contact Luxovia on WhatsApp">WA</a>
 
     <footer class="site-footer">
-      <div><a class="brand" href="./index.html">LUXOVIA</a><p>Premium chauffeur and airport transfers from Bratislava across Europe.</p></div>
-      <div><h3>Routes</h3><a href="./airport-transfers.html">Bratislava airport transfer</a><a href="./airport-transfers.html">Vienna airport transfer</a><a href="./services.html">VIP transfer Slovakia</a></div>
-      <div><h3>Company</h3><a href="./about.html">About us</a><a href="./corporate-accounts.html">Corporate accounts</a><a href="./contact.html">Contact</a></div>
-      <div><h3>Contact</h3><a href="tel:+421908375787">+421 908 37 57 87</a><a href="mailto:booking@luxovia.eu">booking@luxovia.eu</a><span>Bratislava, Slovakia</span></div>
-      <small>© 2026 Luxovia. GDPR-ready booking requests. Private data is used only to prepare and confirm your transfer.</small>
+      <div><a class="brand" href="./index.html">LUXOVIA</a><p data-i18n="footerCopy">Premium chauffeur and airport transfers from Bratislava across Europe.</p></div>
+      <div><h3 data-i18n="footerRoutes">Routes</h3><a href="./airport-transfers.html">Bratislava Airport</a><a href="./airport-transfers.html">Vienna Airport</a><a href="./services.html">Central Europe</a></div>
+      <div><h3 data-i18n="footerCompany">Company</h3><a href="./about.html" data-i18n="about">About us</a><a href="./corporate-accounts.html" data-i18n="corporateAccounts">Corporate accounts</a><a href="./contact.html" data-i18n="navContact">Contact</a></div>
+      <div><h3 data-i18n="navContact">Contact</h3><a href="tel:+421908375787">+421 908 37 57 87</a><a href="mailto:booking@luxovia.eu">booking@luxovia.eu</a><span>Bratislava, Slovakia</span></div>
+      <small>© 2026 Luxovia. GDPR-ready booking requests.</small>
     </footer>
 
+    <dialog class="booking-review" id="booking-review">
+      <div class="review-header">
+        <div><span class="booking-step" data-i18n="reviewKicker">Final check</span><h2 data-i18n="reviewTitle">Review your journey</h2></div>
+        <button type="button" class="review-close" aria-label="Close">×</button>
+      </div>
+      <div class="review-route"><strong data-review="pickup"></strong><span>→</span><strong data-review="destination"></strong></div>
+      <dl class="review-details"></dl>
+      <p class="review-notice" data-i18n="reviewNotice">Luxovia will confirm availability and the final price before payment.</p>
+      <div class="review-actions">
+        <button type="button" class="button ghost review-edit" data-i18n="editBooking">Edit booking</button>
+        <a class="button primary review-whatsapp" href="#" target="_blank" rel="noopener" data-i18n="sendWhatsApp">Send via WhatsApp</a>
+      </div>
+    </dialog>
+
     <script type="application/ld+json">
-      {"@context":"https://schema.org","@type":"LocalBusiness","name":"Luxovia","url":"https://luxovia.eu","telephone":"+421908375787","email":"booking@luxovia.eu","address":{"@type":"PostalAddress","addressLocality":"Bratislava","addressCountry":"SK"},"areaServed":["Bratislava","Vienna","Vienna International Airport","Budapest","Prague","European Union"],"serviceType":["VIP airport transfers","Chauffeur service Bratislava","Vienna chauffeur","Executive transport Slovakia","Private aviation transfers"]}
+      {"@context":"https://schema.org","@type":"LocalBusiness","name":"Luxovia","url":"https://luxovia.eu","telephone":"+421908375787","email":"booking@luxovia.eu","address":{"@type":"PostalAddress","addressLocality":"Bratislava","addressCountry":"SK"},"areaServed":["Bratislava","Vienna","Budapest","Prague","Central Europe"],"serviceType":["VIP airport transfers","Chauffeur service","Executive transportation"]}
     </script>
     <script src="./script.js"></script>
   </body>

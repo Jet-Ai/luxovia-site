@@ -4,115 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Book a VIP Transfer | Luxovia</title>
+    <meta name="description" content="Book a Luxovia VIP chauffeur or airport transfer from Bratislava across Central Europe." />
+    <meta http-equiv="refresh" content="0; url=./index.html#booking" />
+    <link rel="canonical" href="https://luxovia.eu/#booking" />
     <link rel="stylesheet" href="./styles.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
   </head>
-  <body style="background: #000000; color: #ffffff; min-height: 100vh; display: flex; flex-direction: column;">
-
-    <header class="site-header">
+  <body>
+    <main class="booking-redirect">
       <a class="brand" href="./index.html">LUXOVIA</a>
-      <nav class="nav-links" aria-label="Primary navigation">
-        <a href="./fleet.html">Fleet</a>
-        <a href="./services.html">Services</a>
-        <a href="./airport-transfers.html">Airport Transfers</a>
-        <a href="./business-chauffeur.html">Business Chauffeur</a>
-        <a href="./corporate-accounts.html">Corporate</a>
-        <a href="./faq.html">FAQ</a>
-        <a href="./contact.html">Contact</a>
-      </nav>
-      <a class="nav-cta active" href="./booking.html">Book now</a>
-    </header>
-
-    <main style="flex: 1; padding: 6rem 0 4rem 0; display: flex; align-items: center; justify-content: center;">
-      <div class="container" style="max-width: 650px; width: 100%; padding: 0 1.5rem;">
-        
-        <!-- Premium Manual Chauffeur Booking Engine Box -->
-        <div class="booking-panel" style="padding: 3rem; background: #0c0c0c; border: 1px solid #c5a059; border-radius: 8px; box-shadow: 0 20px 40px rgba(0,0,0,0.6); font-family: sans-serif; color: #ffffff;">
-          <h1 style="color: #c5a059; margin-top: 0; margin-bottom: 0.5rem; font-size: 1.8rem; letter-spacing: 1px; text-transform: uppercase; font-family: 'Playfair Display', serif;">Request a VIP Transfer</h1>
-          <p style="color: #888888; font-size: 0.95rem; margin-bottom: 2rem;">Please fill out your journey details below. Your request will be securely routed straight to our operations desk via WhatsApp.</p>
-          
-          <form id="luxovia-page-booking" style="display: flex; flex-direction: column; gap: 1.25rem;">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;">
-              <div>
-                <label style="display: block; font-size: 0.8rem; color: #888; text-transform: uppercase; margin-bottom: 0.4rem; letter-spacing: 0.5px;">Pickup Location</label>
-                <input type="text" id="page-bk-pickup" placeholder="e.g., Bratislava Airport" required style="width: 100%; padding: 0.85rem; background: #141414; border: 1px solid #333; border-radius: 4px; color: #fff; font-size: 0.95rem;">
-              </div>
-              <div>
-                <label style="display: block; font-size: 0.8rem; color: #888; text-transform: uppercase; margin-bottom: 0.4rem; letter-spacing: 0.5px;">Dropoff Location</label>
-                <input type="text" id="page-bk-dropoff" placeholder="e.g., Vienna City" required style="width: 100%; padding: 0.85rem; background: #141414; border: 1px solid #333; border-radius: 4px; color: #fff; font-size: 0.95rem;">
-              </div>
-            </div>
-
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;">
-              <div>
-                <label style="display: block; font-size: 0.8rem; color: #888; text-transform: uppercase; margin-bottom: 0.4rem; letter-spacing: 0.5px;">Date</label>
-                <input type="date" id="page-bk-date" required style="width: 100%; padding: 0.85rem; background: #141414; border: 1px solid #333; border-radius: 4px; color: #fff; font-size: 0.95rem; color-scheme: dark;">
-              </div>
-              <div>
-                <label style="display: block; font-size: 0.8rem; color: #888; text-transform: uppercase; margin-bottom: 0.4rem; letter-spacing: 0.5px;">Time</label>
-                <input type="time" id="page-bk-time" required style="width: 100%; padding: 0.85rem; background: #141414; border: 1px solid #333; border-radius: 4px; color: #fff; font-size: 0.95rem; color-scheme: dark;">
-              </div>
-            </div>
-
-            <div>
-              <label style="display: block; font-size: 0.8rem; color: #888; text-transform: uppercase; margin-bottom: 0.4rem; letter-spacing: 0.5px;">Select Service Fleet</label>
-              <select id="page-bk-fleet" style="width: 100%; padding: 0.85rem; background: #141414; border: 1px solid #333; border-radius: 4px; color: #fff; font-size: 0.95rem; height: 46px;">
-                <option value="Business Class (Mercedes-Benz E-Class)">Business Class (E-Class)</option>
-                <option value="First Class (Mercedes-Benz S-Class)">First Class (S-Class)</option>
-                <option value="Business Van (Mercedes-Benz V-Class)">Business Van (V-Class)</option>
-              </select>
-            </div>
-
-            <div>
-              <label style="display: block; font-size: 0.8rem; color: #888; text-transform: uppercase; margin-bottom: 0.4rem; letter-spacing: 0.5px;">Your Full Name</label>
-              <input type="text" id="page-bk-name" placeholder="John Doe" required style="width: 100%; padding: 0.85rem; background: #141414; border: 1px solid #333; border-radius: 4px; color: #fff; font-size: 0.95rem;">
-            </div>
-
-            <div style="margin-top: 1.5rem;">
-              <button type="submit" style="width: 100%; padding: 1.1rem; background: linear-gradient(135deg, #c5a059 0%, #a37f3d 100%); border: none; border-radius: 4px; color: #000000; font-weight: bold; text-transform: uppercase; font-size: 0.95rem; letter-spacing: 1px; cursor: pointer; transition: opacity 0.2s;">
-                Submit Booking Request
-              </button>
-            </div>
-          </form>
-        </div>
-
-      </div>
+      <h1>Opening secure booking</h1>
+      <p>You are being redirected to the Luxovia booking form.</p>
+      <a class="button primary" href="./index.html#booking">Continue to booking</a>
     </main>
-
-    <footer class="site-footer" style="padding: 2rem 0; background: #0c0c0c; border-top: 1px solid #141414; text-align: center; font-size: 0.85rem; color: #666666;">
-      <small>© 2026 Luxovia. All rights reserved.</small>
-    </footer>
-
     <script>
-      document.getElementById('luxovia-page-booking').addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        const pickup = document.getElementById('page-bk-pickup').value;
-        const dropoff = document.getElementById('page-bk-dropoff').value;
-        const date = document.getElementById('page-bk-date').value;
-        const time = document.getElementById('page-bk-time').value;
-        const fleet = document.getElementById('page-bk-fleet').value;
-        const name = document.getElementById('page-bk-name').value;
-
-        const message = `✨ *LUXOVIA VIP TRANSFER REQUEST* ✨\n\n` +
-                        `👤 *Client Name:* ${name}\n` +
-                        `📍 *Pickup:* ${pickup}\n` +
-                        `🏁 *Dropoff:* ${dropoff}\n` +
-                        `📅 *Date:* ${date}\n` +
-                        `⏰ *Time:* ${time}\n` +
-                        `🚘 *Fleet Vehicle:* ${fleet}`;
-
-        const encodedMessage = encodeURIComponent(message);
-        const phoneNumber = "421908375787";
-
-        // Desktop vs Mobile universal API router fallback logic
-        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-        const whatsappUrl = isMobile 
-          ? `https://wa.me/${phoneNumber}?text=${encodedMessage}`
-          : `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
-        
-        window.open(whatsappUrl, '_blank');
-      });
+      window.location.replace("./index.html#booking");
     </script>
   </body>
 </html>
