@@ -9,8 +9,99 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./styles.css" />
+    <style>
+      /* Integrated Premium Styling Polish */
+      .faq-search-wrapper {
+        max-width: 600px;
+        margin: -2rem auto 4rem auto;
+        padding: 0 1.5rem;
+        text-align: center;
+      }
+      .faq-search-input {
+        width: 100%;
+        background: #0c0c0c;
+        border: 1px solid rgba(197, 160, 89, 0.25);
+        padding: 1rem 1.5rem;
+        color: #fff;
+        font-family: 'Inter', sans-serif;
+        font-size: 1rem;
+        border-radius: 4px;
+        outline: none;
+        transition: border-color 0.3s ease;
+      }
+      .faq-search-input:focus {
+        border-color: #c5a059;
+      }
+      .category-chips {
+        display: flex;
+        justify-content: center;
+        gap: 0.75rem;
+        margin-top: 1.5rem;
+        flex-wrap: wrap;
+      }
+      .chip {
+        background: #0c0c0c;
+        border: 1px solid #1c1c1c;
+        color: #888;
+        padding: 0.5rem 1.25rem;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+      .chip.active, .chip:hover {
+        border-color: #c5a059;
+        color: #c5a059;
+        background: rgba(197, 160, 89, 0.05);
+      }
+      details {
+        margin-bottom: 1.25rem;
+        border-bottom: 1px solid #141414;
+        padding-bottom: 1.25rem;
+        transition: all 0.3s ease;
+      }
+      summary {
+        font-weight: 600;
+        cursor: pointer;
+        color: #ffffff;
+        font-size: 1.1rem;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+      }
+      summary::-webkit-details-marker {
+        display: none;
+      }
+      summary::after {
+        content: '→';
+        color: #c5a059;
+        font-family: 'Inter', sans-serif;
+        font-weight: 400;
+        transition: transform 0.3s ease;
+        margin-left: 1rem;
+      }
+      details[open] summary::after {
+        transform: rotate(90deg);
+      }
+      .category-section {
+        margin-top: 3.5rem;
+        margin-bottom: 2rem;
+      }
+      .category-title {
+        color: #c5a059;
+        font-family: 'Playfair Display', serif;
+        font-size: 1.6rem;
+        margin-bottom: 1.5rem;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+      }
+    </style>
   </head>
-  <body>
+  <body style="background: #000000; color: #ffffff;">
+    
     <header class="site-header" data-header>
       <a class="brand" href="./index.html">LUXOVIA</a>
       <nav class="nav-links" aria-label="Primary navigation">
@@ -19,7 +110,7 @@
         <a href="./airport-transfers.html">Airport Transfers</a>
         <a href="./business-chauffeur.html">Business Chauffeur</a>
         <a href="./corporate-accounts.html">Corporate</a>
-        <a href="./faq.html">FAQ</a>
+        <a class="active" href="./faq.html">FAQ</a>
         <a href="./contact.html">Contact</a>
       </nav>
       <a class="nav-cta" href="./booking.html">Book now</a>
@@ -30,69 +121,78 @@
       <section class="page-hero faq-page">
         <div class="page-hero-overlay"></div>
         <div>
-          <h1>Service Standards & FAQ</h1>
+          <h1 style="font-family: 'Playfair Display', serif;">Service Standards & FAQ</h1>
           <p>Everything you need to know about our executive cross-border transfers and premium chauffeur protocols.</p>
         </div>
       </section>
 
-      <!-- Premium FAQ Layout split into professional columns -->
-      <section class="section contact-layout" style="gap: 40px;">
-        <div class="faq-accordion-container" style="flex: 1.2;">
+      <!-- Live Interactive Search Matrix -->
+      <div class="faq-search-wrapper">
+        <input type="text" id="faqSearch" class="faq-search-input" placeholder="Search service protocols or keywords..." aria-label="Search FAQs">
+        <div class="category-chips">
+          <button type="button" class="chip active" onclick="filterCategory('all')">All Standards</button>
+          <button type="button" class="chip" onclick="filterCategory('airport')">Airports</button>
+          <button type="button" class="chip" onclick="filterCategory('fleet-info')">Fleet & Drivers</button>
+          <button type="button" class="chip" onclick="filterCategory('billing')">Payments & Accounts</button>
+        </div>
+      </div>
+
+      <!-- FAQ Container -->
+      <section class="section" style="padding-top: 0; max-width: 900px; margin: 0 auto 6rem auto;">
+        <div class="container" style="padding: 0 1.5rem;">
           
-          <h2 style="color: #c5a059; font-family: 'Playfair Display', serif; margin-bottom: 20px;">Airport & Flight Protocols</h2>
-          
-          <details open style="margin-bottom: 15px; border-bottom: 1px solid #222; padding-bottom: 15px;">
-            <summary style="font-weight: 600; cursor: pointer; color: #fff; font-size: 1.1rem; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-              How does the Meet & Greet service work at Vienna (VIE) & Bratislava (BTS)?
-            </summary>
-            <p style="margin-top: 10px; color: #ccc; line-height: 1.6;">For a flawless arrival, your professional chauffeur will monitor your flight in real-time. They will enter the arrivals terminal exactly 15 minutes after you land, holding a professional digital tablet presenting your name or your company logo. They will assist you fully with your luggage and escort you directly to your prepared premium vehicle.</p>
-          </details>
+          <!-- Category 1: Airport Protocols -->
+          <div class="category-section" data-cat="airport">
+            <h2 class="category-title">Airport & Flight Protocols</h2>
+            
+            <details open data-faq-item>
+              <summary>How does the Meet & Greet service work at Vienna (VIE) & Bratislava (BTS)?</summary>
+              <p style="margin-top: 10px; color: #aaa; line-height: 1.6; font-size: 0.98rem;">For a flawless arrival, your professional chauffeur will monitor your flight in real-time. They will enter the arrivals terminal exactly 15 minutes after you land, holding a professional digital tablet presenting your name or your company logo. They will assist you fully with your luggage and escort you directly to your prepared premium vehicle.</p>
+            </details>
 
-          <details style="margin-bottom: 15px; border-bottom: 1px solid #222; padding-bottom: 15px;">
-            <summary style="font-weight: 600; cursor: pointer; color: #fff; font-size: 1.1rem; list-style: none;">
-              What happens if my flight into Vienna or Bratislava is delayed?
-            </summary>
-            <p style="margin-top: 10px; color: #ccc; line-height: 1.6;">There are absolutely no surcharges for delayed flights. Because we require your flight number during booking, our dispatch network tracks your aircraft live. Your pickup time is automatically adjusted to your actual landing time, guaranteeing your chauffeur is standing ready when you exit customs.</p>
-          </details>
+            <details data-faq-item>
+              <summary>What happens if my flight into Vienna or Bratislava is delayed?</summary>
+              <p style="margin-top: 10px; color: #aaa; line-height: 1.6; font-size: 0.98rem;">There are absolutely no surcharges for delayed flights. Because we require your flight number during booking, our dispatch network tracks your aircraft live. Your pickup time is automatically adjusted to your actual landing time, guaranteeing your chauffeur is standing ready when you exit customs.</p>
+            </details>
 
-          <details style="margin-bottom: 40px; border-bottom: 1px solid #222; padding-bottom: 15px;">
-            <summary style="font-weight: 600; cursor: pointer; color: #fff; font-size: 1.1rem; list-style: none;">
-              How much complimentary waiting time is included?
-            </summary>
-            <p style="margin-top: 10px; color: #ccc; line-height: 1.6;">All airport pickups include up to 60 minutes of complimentary waiting time from the moment your aircraft wheels touch the tarmac. This provides ample, stress-free time to pass through border control and retrieve your luggage. Standard address pickups include 15 minutes of complimentary waiting time.</p>
-          </details>
+            <details data-faq-item>
+              <summary>How much complimentary waiting time is included?</summary>
+              <p style="margin-top: 10px; color: #aaa; line-height: 1.6; font-size: 0.98rem;">All airport pickups include up to 60 minutes of complimentary waiting time from the moment your aircraft wheels touch the tarmac. This provides ample, stress-free time to pass through border control and retrieve your luggage. Standard address pickups include 15 minutes of complimentary waiting time.</p>
+            </details>
+          </div>
 
-          <h2 style="color: #c5a059; font-family: 'Playfair Display', serif; margin-bottom: 20px;">Vehicles & Executive Standards</h2>
+          <!-- Category 2: Fleet Standards -->
+          <div class="category-section" data-cat="fleet-info">
+            <h2 class="category-title">Vehicles & Executive Standards</h2>
 
-          <details style="margin-bottom: 15px; border-bottom: 1px solid #222; padding-bottom: 15px;">
-            <summary style="font-weight: 600; cursor: pointer; color: #fff; font-size: 1.1rem; list-style: none;">
-              What conditions and standards can I expect from the fleet?
-            </summary>
-            <p style="margin-top: 10px; color: #ccc; line-height: 1.6;">Luxovia operates an immaculate, strictly black Mercedes-Benz fleet (including S-Class luxury sedans, E-Class executive sedans, and V-Class premium vans). Every vehicle is deeply detailed, completely sanitized, and presented to corporate road standards before your journey. Complimentary chilled bottled water and high-speed Wi-Fi are provided on all cross-border routes.</p>
-          </details>
+            <details data-faq-item>
+              <summary>What conditions and standards can I expect from the fleet?</summary>
+              <p style="margin-top: 10px; color: #aaa; line-height: 1.6; font-size: 0.98rem;">Luxovia operates an immaculate, strictly black Mercedes-Benz fleet (including S-Class luxury sedans, E-Class executive sedans, and V-Class premium vans). Every vehicle is deeply detailed, completely sanitized, and presented to corporate road standards before your journey. Complimentary chilled bottled water and high-speed Wi-Fi are provided on all cross-border routes.</p>
+            </details>
 
-          <details style="margin-bottom: 15px; border-bottom: 1px solid #222; padding-bottom: 15px;">
-            <summary style="font-weight: 600; cursor: pointer; color: #fff; font-size: 1.1rem; list-style: none;">
-              Are your chauffeurs fully licensed and English-speaking?
-            </summary>
-            <p style="margin-top: 10px; color: #ccc; line-height: 1.6;">Yes, absolutely. Every single Luxovia driver is a professional commercial chauffeur holding a valid Slovak transport license (*Koncesia*). They are completely bilingual, highly experienced with diplomatic and private aviation protocols, and have extensive geographic knowledge of the Vienna, Bratislava, and Budapest corridors.</p>
-          </details>
+            <details data-faq-item>
+              <summary>Are your chauffeurs fully licensed and English-speaking?</summary>
+              <p style="margin-top: 10px; color: #aaa; line-height: 1.6; font-size: 0.98rem;">Yes, absolutely. Every single Luxovia driver is a professional commercial chauffeur holding a valid Slovak transport license (*Koncesia*). They are completely bilingual, highly experienced with diplomatic and private aviation protocols, and have extensive geographic knowledge of the Vienna, Bratislava, and Budapest corridors.</p>
+            </details>
+          </div>
 
-          <h2 style="color: #c5a059; font-family: 'Playfair Display', serif; margin-top: 40px; margin-bottom: 20px;">Payments & Corporate Corporate Accounts</h2>
+          <!-- Category 3: Financial & Corporate Billing -->
+          <div class="category-section" data-cat="billing">
+            <h2 class="category-title">Payments & Corporate Accounts</h2>
 
-          <details style="margin-bottom: 15px; border-bottom: 1px solid #222; padding-bottom: 15px;">
-            <summary style="font-weight: 600; cursor: pointer; color: #fff; font-size: 1.1rem; list-style: none;">
-              What payment methods do you accept?
-            </summary>
-            <p style="margin-top: 10px; color: #ccc; line-height: 1.6;">We support secure payment workflows tailored for corporate travelers. You can pay seamlessly online during booking, request a secure card payment link via Revolut, or pay your chauffeur inside the vehicle via credit/debit card (Visa, Mastercard, Amex). For corporate accounts, we offer monthly consolidated invoicing.</p>
-          </details>
+            <details data-faq-item>
+              <summary>What payment methods do you accept?</summary>
+              <p style="margin-top: 10px; color: #aaa; line-height: 1.6; font-size: 0.98rem;">We support secure payment workflows tailored for corporate travelers. You can pay seamlessly online during booking, request a secure card payment link via Revolut, or pay your chauffeur inside the vehicle via credit/debit card (Visa, Mastercard, Amex). For corporate accounts, we offer monthly consolidated invoicing.</p>
+            </details>
 
-          <details style="margin-bottom: 15px; border-bottom: 1px solid #222; padding-bottom: 15px;">
-            <summary style="font-weight: 600; pointer; color: #fff; font-size: 1.1rem; list-style: none;">
-              How can we set up a Corporate Account for our enterprise?
-            </summary>
-            <p style="margin-top: 10px; color: #ccc; line-height: 1.6;">Embassies, luxury business hotels, and corporations can open a dedicated client profile. This grants priority fleet availability, access to custom cross-border flat-rates, dedicated account logs, and streamlined billing options. Please reach out via our Contact page or email us at booking@luxovia.eu to establish terms.</p>
-          </details>
+            <details data-faq-item>
+              <summary>How can we set up a Corporate Account for our enterprise?</summary>
+              <p style="margin-top: 10px; color: #aaa; line-height: 1.6; font-size: 0.98rem;">Embassies, luxury business hotels, and corporations can open a dedicated client profile. This grants priority fleet availability, access to custom cross-border flat-rates, dedicated account logs, and streamlined billing options. Please reach out via our Contact page or email us at booking@luxovia.eu to establish terms.</p>
+            </details>
+          </div>
+
+          <!-- Live fallback placeholder note if no results matched -->
+          <p id="noResults" style="display: none; text-align: center; color: #666; margin-top: 4rem;">No specific standard found matching your criteria. Please contact dispatch directly.</p>
 
         </div>
       </section>
@@ -105,5 +205,66 @@
     </footer>
     
     <script src="./script.js"></script>
+    
+    <!-- Live Search Filter Script Logic -->
+    <script>
+      const searchInput = document.getElementById('faqSearch');
+      const faqItems = document.querySelectorAll('[data-faq-item]');
+      const sections = document.querySelectorAll('.category-section');
+      const noResultsMsg = document.getElementById('noResults');
+
+      // Live search input filtering
+      if(searchInput) {
+        searchInput.addEventListener('input', () => {
+          const filter = searchInput.value.toLowerCase().trim();
+          let visibleItemsCount = 0;
+
+          faqItems.forEach(item => {
+            const text = item.textContent.toLowerCase();
+            if(text.includes(filter)) {
+              item.style.display = 'block';
+              visibleItemsCount++;
+              // Auto-expand item when actively searching keywords
+              if (filter.length > 2) item.setAttribute('open', '');
+            } else {
+              item.style.display = 'none';
+              item.removeAttribute('open');
+            }
+          });
+
+          // Toggle visibility of empty section category headers dynamically
+          sections.forEach(sec => {
+            const hasVisibleItems = Array.from(sec.querySelectorAll('[data-faq-item]')).some(item => item.style.display !== 'none');
+            sec.style.display = hasVisibleItems ? 'block' : 'none';
+          });
+
+          noResultsMsg.style.display = visibleItemsCount === 0 ? 'block' : 'none';
+        });
+      }
+
+      // Filter view by clicking quick chips
+      function filterCategory(catId) {
+        // Clear search input filter rule
+        if(searchInput) searchInput.value = '';
+        
+        // Update active class on chips
+        document.querySelectorAll('.chip').forEach(btn => btn.classList.remove('active'));
+        event.currentTarget.classList.add('active');
+
+        let visibleSectionsCount = 0;
+        sections.forEach(sec => {
+          if(catId === 'all' || sec.dataset.cat === catId) {
+            sec.style.display = 'block';
+            visibleSectionsCount++;
+            // Reset items inside back to visible state
+            sec.querySelectorAll('[data-faq-item]').forEach(item => item.style.display = 'block');
+          } else {
+            sec.style.display = 'none';
+          }
+        });
+
+        noResultsMsg.style.display = visibleSectionsCount === 0 ? 'block' : 'none';
+      }
+    </script>
   </body>
 </html>
